@@ -44,3 +44,19 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL(smtp_server, port, context=context) as smpt:
     smpt.login(email_sender, email_password)
     smpt.sendmail(email_sender, email_receiver, em.as_string())
+ ######################################
+
+
+
+# Web scarping also more interesting
+import requests
+from bs4 import BeautifulSoup
+url = "https://www.codewithtomi.com/"
+r = requests.get(url)
+soup = BeautifulSoup(r.content, 'lxml')
+title = soup.find_all('h2', {'class': 'post-title'})
+print(title)
+print(title[0].get_text())
+
+
+
