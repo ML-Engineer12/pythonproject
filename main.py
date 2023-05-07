@@ -26,7 +26,7 @@ email_receiver = "macok89993@ezgiant.com"
 # for ssl:
 port =  465
 email_subject = "Request for subscribtion"
-email_body = """If you like my video please subscribe my channel"""
+email_body = "If you like my video please subscribe my channel"
 smtp_server = 'smtp.gmail.com'
 
 
